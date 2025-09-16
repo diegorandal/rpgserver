@@ -1,11 +1,8 @@
 {
   "name": "my-game",
-  "version": "1.0.0",
   "scripts": {
-    "start": "node dist/server/main.mjs"
-  },
-  "engines": {
-    "node": ">=14"
+    "start": "node dist/server/main.mjs",
+    "dev": "rpgjs dev"
   },
   "dependencies": {
     "@rpgjs/client": "4.3.0",
