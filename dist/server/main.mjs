@@ -35,7 +35,7 @@ const player = {
 
   async onJoinMap(player2) {
     if (player2.getVariable("AFTER_INTRO")) return;
-    await player2.showText("Welcome to the start of RPGJS...");
+    await player2.showText("Bienvenido a ChainRPG...");
     player2.setVariable("AFTER_INTRO", true);
   }
 };
