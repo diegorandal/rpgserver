@@ -2,8 +2,7 @@
   "name": "my-game",
   "version": "1.0.0",
   "scripts": {
-    "build": "npx rpgjs-compiler build",
-    "start": "npm run build && node dist/server/main.mjs"
+    "start": "node dist/server/main.mjs"
   },
   "engines": {
     "node": ">=14"
