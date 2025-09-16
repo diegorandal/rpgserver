@@ -1,10 +1,9 @@
 {
   "name": "my-game",
+  "version": "1.0.0",
   "scripts": {
     "build": "rpgjs build",
-    "dev-server": "rpgjs build && node dist/server/main.mjs",
-    "dev-client": "vite --host 0.0.0.0 --port 82 --https=false",
-    "start": "node dist/server/main.mjs"
+    "start": "npm run build && node dist/server/main.mjs"
   },
   "engines": {
     "node": ">=14"
@@ -21,7 +20,6 @@
   },
   "devDependencies": {
     "@rpgjs/compiler": "4.3.0",
-    "typescript": "5.3.3",
-    "vite": "^5.0.0"
+    "typescript": "5.3.3"
   }
 }
