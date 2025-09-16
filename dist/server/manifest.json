@@ -1,0 +1,7 @@
+{
+  "virtual-server.ts": {
+    "file": "main.mjs",
+    "isEntry": true,
+    "src": "virtual-server.ts"
+  }
+}

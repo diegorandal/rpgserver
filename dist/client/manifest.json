@@ -1,0 +1,76 @@
+{
+  "_vendor-ad69b20f.js": {
+    "assets": [
+      "assets/error_002-76810ec3.ogg",
+      "assets/confirmation_002-33b17a9a.ogg",
+      "assets/gamepad-e5a5597c.svg",
+      "assets/flatDark35-21ea2311.png",
+      "assets/flatDark32-85cd8cee.png",
+      "assets/potion-ball-e78cb80a.svg",
+      "assets/back-0ba37d78.png"
+    ],
+    "css": [
+      "assets/vendor-2e71e604.css"
+    ],
+    "dynamicImports": [
+      "node_modules/@rpgjs/client/lib/Gui/React.js"
+    ],
+    "file": "assets/vendor-ad69b20f.js"
+  },
+  "index.html": {
+    "file": "assets/main-48e4a6fd.js",
+    "imports": [
+      "_vendor-ad69b20f.js"
+    ],
+    "isEntry": true,
+    "src": "index.html"
+  },
+  "node_modules/@rpgjs/client/lib/Gui/React.js": {
+    "file": "assets/React-0f513db0.js",
+    "imports": [
+      "_vendor-ad69b20f.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "node_modules/@rpgjs/client/lib/Gui/React.js"
+  },
+  "node_modules/@rpgjs/default-gui/src/assets/controls/back.png": {
+    "file": "assets/back-0ba37d78.png",
+    "src": "node_modules/@rpgjs/default-gui/src/assets/controls/back.png"
+  },
+  "node_modules/@rpgjs/default-gui/src/assets/icons/potion-ball.svg": {
+    "file": "assets/potion-ball-e78cb80a.svg",
+    "src": "node_modules/@rpgjs/default-gui/src/assets/icons/potion-ball.svg"
+  },
+  "node_modules/@rpgjs/default-gui/src/assets/sounds/confirmation_002.ogg": {
+    "file": "assets/confirmation_002-33b17a9a.ogg",
+    "src": "node_modules/@rpgjs/gamepad/client/assets/confirmation_002.ogg"
+  },
+  "node_modules/@rpgjs/default-gui/src/assets/sounds/error_002.ogg": {
+    "file": "assets/error_002-76810ec3.ogg",
+    "src": "node_modules/@rpgjs/gamepad/client/assets/error_002.ogg"
+  },
+  "node_modules/@rpgjs/gamepad/client/assets/confirmation_002.ogg": {
+    "file": "assets/confirmation_002-33b17a9a.ogg",
+    "src": "node_modules/@rpgjs/gamepad/client/assets/confirmation_002.ogg"
+  },
+  "node_modules/@rpgjs/gamepad/client/assets/error_002.ogg": {
+    "file": "assets/error_002-76810ec3.ogg",
+    "src": "node_modules/@rpgjs/gamepad/client/assets/error_002.ogg"
+  },
+  "node_modules/@rpgjs/gamepad/client/assets/gamepad.svg": {
+    "file": "assets/gamepad-e5a5597c.svg",
+    "src": "node_modules/@rpgjs/gamepad/client/assets/gamepad.svg"
+  },
+  "node_modules/@rpgjs/mobile-gui/src/assets/flatDark32.png": {
+    "file": "assets/flatDark32-85cd8cee.png",
+    "src": "node_modules/@rpgjs/mobile-gui/src/assets/flatDark32.png"
+  },
+  "node_modules/@rpgjs/mobile-gui/src/assets/flatDark35.png": {
+    "file": "assets/flatDark35-21ea2311.png",
+    "src": "node_modules/@rpgjs/mobile-gui/src/assets/flatDark35.png"
+  },
+  "vendor.css": {
+    "file": "assets/vendor-2e71e604.css",
+    "src": "vendor.css"
+  }
+}
