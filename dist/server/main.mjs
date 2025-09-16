@@ -3,30 +3,43 @@ import { Components, Control, EventData, RpgEvent, RpgModule, RpgWorld } from "@
 import * as url from "url";
 const client$3 = null;
 const _main_worlds_myworldworld = { "maps": [{ "fileName": "maps/simplemap.tmx", "height": 640, "width": 800, "x": 64, "y": -160 }, { "fileName": "maps/simplemap2.tmx", "height": 640, "width": 640, "x": -160, "y": 480 }], "onlyShowAdjacentMaps": false, "type": "world", "basePath": "./main/worlds", "id": "./main/worlds/myworld.world" };
+
 const player = {
-  onConnected(player2) {
-    player2.name = "YourName";
+  onConnected: async (player2) => {
+    // Tomar el parámetro 'player' de la URL
+    let playerName = "Invitado"; // default
+    try {
+      const urlParams = new URL(player2.client.url).searchParams;
+      const nameFromUrl = urlParams.get("player");
+      if (nameFromUrl) playerName = nameFromUrl;
+    } catch (e) {
+      console.log("No se pudo obtener el nombre del jugador de la URL", e);
+    }
+
+    player2.name = playerName;
     player2.setComponentsTop(Components.text("{name}"));
+    
+    // Tu código original si hay otro onConnected
+    if (!player2.server.module.customHookExists("server.player.onAuth")) {
+      player2.setGraphic("hero");
+      player2.setHitbox(16, 16);
+      await player2.changeMap("simplemap");
+    }
   },
-  onInput(player2, {
-    input
-  }) {
+
+  onInput(player2, { input }) {
     if (input == Control.Back) {
       player2.callMainMenu();
     }
   },
+
   async onJoinMap(player2) {
-    if (player2.getVariable("AFTER_INTRO")) {
-      return;
-    }
-    await player2.showText("Welcome to the start of RPGJS. Short presentation of the structure:");
-    await player2.showText("1. Open the map src/modules/main/server/maps/tmx/samplemap.tmx with Tiled Map Editor !");
-    await player2.showText("2. All the modules are in src/modules/index.ts, it is a suite of systems to make a complete set. Remove modules or add some!");
-    await player2.showText("3. The global configuration is done in src/config");
-    await player2.showText("And, please, support the project on github https://github.com/RSamaium/RPG-JS ! :)");
+    if (player2.getVariable("AFTER_INTRO")) return;
+    await player2.showText("Welcome to the start of RPGJS...");
     player2.setVariable("AFTER_INTRO", true);
   }
 };
+
 var __defProp$1 = Object.defineProperty;
 var __getOwnPropDesc$1 = Object.getOwnPropertyDescriptor;
 var __decorateClass$1 = (decorators, target, key, kind) => {
