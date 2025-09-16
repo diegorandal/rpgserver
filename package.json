@@ -2,9 +2,9 @@
   "name": "my-game",
   "version": "1.0.0",
   "scripts": {
-    "build": "rpgjs build",
+    "build": "npx rpgjs build",
     "start": "npm run build && node dist/server/main.mjs"
-  },
+  }
   "engines": {
     "node": ">=14"
   },
