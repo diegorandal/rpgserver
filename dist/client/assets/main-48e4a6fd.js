@@ -1,4 +1,5 @@
 import { S as Spritesheet, P as Presets, R as RpgModule, _ as _rpgjs_mobile_gui, a as _rpgjs_default_gui, b as _rpgjs_gamepad, e as entryPoint, l as lookup } from "./vendor-ad69b20f.js";
+
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -99,9 +100,13 @@ const modules = [
   _rpgjs_gamepad
 ];
 const globalConfig = { "name": "My Game", "gamepad": {} };
-document.addEventListener("DOMContentLoaded", function(e) {
+document.addEventListener("DOMContentLoaded", function (e) {
+  const username = prompt("Ingresa tu nombre de jugador:") || "Invitado"
+
   entryPoint(modules, {
-    io: lookup,
+    io: {
+      query: { username }
+    },
     globalConfig,
     envs: {
       VITE_BUILT: 1,
